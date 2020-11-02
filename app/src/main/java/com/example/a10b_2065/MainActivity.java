@@ -2,6 +2,7 @@ package com.example.a10b_2065;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -26,7 +27,15 @@ public class MainActivity extends AppCompatActivity {
         String password = etPassword.getText().toString();
 
         if(email.equals("admin") && password.equals("admin")){
-            Toast.makeText(this, "Все верно!", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Все верно!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, UserActivity.class);
+            intent.putExtra("myExtra", "admin");
+            startActivity(intent);
+        }
+        else if(email.equals("wsr123") && password.equals("123")){
+            Intent intent = new Intent(this, UserActivity.class);
+            intent.putExtra("myExtra", "wsr123");
+            startActivity(intent);
         }
         else if(email.isEmpty() || password.isEmpty()){
             Toast.makeText(this, "Заполните все поля!", Toast.LENGTH_SHORT).show();

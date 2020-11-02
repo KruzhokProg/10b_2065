@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/background_main_activity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="37dp"
         android:text="Добро пожаловать!"
         android:textSize="24sp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/et_email"
@@ -24,6 +26,7 @@
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Введите Email"
+        android:textColorHint="@color/white"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
@@ -36,6 +39,7 @@
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Введите пароль"
+        android:textColorHint="@color/white"
         android:inputType="textPersonName|textPassword"
         app:layout_constraintEnd_toEndOf="@+id/et_email"
         app:layout_constraintStart_toStartOf="@+id/et_email"
@@ -48,7 +52,18 @@
         android:layout_marginTop="24dp"
         android:text="Войти"
         android:onClick="checkUser"
+        android:background="@drawable/cornered_button"
         app:layout_constraintEnd_toEndOf="@+id/et_password"
         app:layout_constraintStart_toStartOf="@+id/et_password"
         app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="170dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mob1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
